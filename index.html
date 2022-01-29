@@ -37,6 +37,61 @@
     <title>Writer | Canvas</title>
 
 </head>
+<style>
+    .block-form-1 .form-group {
+        position: relative;
+    }
+    
+    .block-form-1 .form-group label:not(.error) {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        margin-bottom: 0;
+        /* Override default `<label>` margin */
+        color: #BBB;
+        padding: 0 4px;
+        transform: translateY(-50%);
+        transition: all 200ms ease;
+        cursor: text;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+    
+    .block-form-1 .form-group input:focus+label:not(.error),
+    .block-form-1 .form-group input.focus-visible+label:not(.error),
+    .block-form-1 .form-group input:visited+label:not(.error),
+    .block-form-1 .form-group input:not(:placeholder-shown)+label:not(.error) {
+        font-size: 70%;
+        transform: translate3d(0, -50%, 0);
+        top: 0;
+        color: #999;
+        background-color: #FFF;
+    }
+    
+    .block-form-1 .form-group input::-webkit-input-placeholder {
+        opacity: 0;
+    }
+    
+    .block-form-1 .form-group input:-ms-input-placeholder {
+        opacity: 0;
+    }
+    
+    .block-form-1 .form-group input::-moz-placeholder {
+        opacity: 0;
+    }
+    
+    .block-form-1 .form-control.border-bottom {
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+    }
+    
+    .block-form-1 .form-control.border-bottom+label:not(.error) {
+        left: 0;
+        color: #BBb !important;
+    }
+</style>
 
 <body class="sticky-footer stretched">
 
@@ -156,15 +211,28 @@
             <div class="vertical-middle ignore-header">
                 <div class="container dark py-5">
                     <div class="row">
-                        <div class="col-lg-6 offset-lg-1 col-md-8" data-lightbox="gallery">
-                            <a href="demos/writer/images/hero/slider-book-lg.jpg" data-lightbox="gallery-item" class="slider-book-img" data-animate="fadeInUp"><img src="demos/writer/images/hero/slider-book.png" alt="Image"></a>
-                            <a href="demos/writer/images/hero/slider-book2-lg.jpg" data-lightbox="gallery-item" class="slider-book-img" data-animate="fadeInUp" data-delay="300"><img src="demos/writer/images/hero/slider-book2.png" alt="Image"></a>
-                            <div class="emphasis-title bottommargin-sm">
-                                <h1 class="400" data-animate="fadeInUp" data-delay="600">Latest released by<br><span><em>Arnold Newman</em></span>.</h1>
+                        <form name="login-form" class="col-4 border bg-dark rounded row no-gutters form-signin block-form-1 " action="#" method="post" autocomplete="off">
+
+                            <div class="col-12 text-center">
+                                <h3>Login</h3>
                             </div>
-                            <a data-animate="fadeIn" class="button button-large button-border button-white button-light button-rounded text-capitalize mt-0"><span>Get it Now</span></a><br class="d-block d-sm-none">
-                            <a data-animate="fadeIn" data-delay="1600" href="https://www.youtube.com/watch?v=auJWC-o-RiY" class="hero-action-link d-inline-block ml-2 mt-2 ml-sm-3 mt-sm-0" data-lightbox="iframe"><i class="icon-play-sign"></i> Watch the Trailor</a>
-                        </div>
+
+                            <div class="col-12 form-group">
+                                <input type="text" id="form-username" class="form-control" placeholder="Username" />
+                                <label for="form-username">Username:</label>
+                            </div>
+
+                            <div class="col-12 form-group">
+                                <input type="password" id="form-password" autocomplete="new-password" class="form-control" placeholder="Username" />
+                                <label for="form-password">Password:</label>
+                            </div>
+
+                            <div class="col-12 form-group text-center">
+                                <button class="btn btn-primary btn-block mb-3">Login</button>
+                                <h6 class="font-weight-medium">Ainda não tem uma conta? <a href="#"><u>Criar Conta</u></a></h6>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -193,12 +261,18 @@
                                 <img src="demos/writer/images/section/2.png" alt="Book Mockup" style="margin-top: 10px;">
                             </div>
                             <div class="col-lg-6 offset-lg-1">
-                                <h3 class="color font-weight-normal" style="font-size: 36px;">Popular Book by<br>Mr. Newman</h3>
-                                <p class="dark lead">
-                                    <span class="dropcap color font-secondary">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis fuga enim tenetur quasi saepe ipsum doloribus illum cumque. Commodi quidem culpa et! Molestias,
-                                    dolor, illum autem similique voluptatum .
-                                </p>
-                                <a href="#" class="button button-large button-white button-light text-capitalize button-rounded">Know more</a>
+                                <h3 class="color font-weight-normal" style="font-size: 36px;">Professor
+                                    <p class="dark lead">
+                                        <span class="dropcap color font-secondary">O</span>btendo tamanho domínio dos feitiços, podendo brincar com magia a seu bel prazer, os Professores são especialistas em transmitir seu conhecimento até para as mentes
+                                        mais ignorantes.
+                                    </p>
+                                    <p class="dark lead">
+                                        <span class="dropcap color font-secondary">E</span>studaram a ponto de replicar magias uma segunda vez enquanto conjura novamente, pesquisaram a fundo o poder da alma e como sugá-la de seus oponentes, além de dominarem
+                                        a mesma arte das aranhas na criação de teias firmes e fortes. Se você encontrar um professor, saiba que ele já foi um grande sábio.
+                                    </p>
+
+
+                                    <a href="#" class="button button-large button-white button-light text-capitalize button-rounded">Ler mais</a>
                             </div>
                         </div>
 
@@ -207,7 +281,7 @@
                         <div class="row clearfix">
                             <div class="col-lg-6">
                                 <div class="heading-block dark text-left border-bottom-0">
-                                    <h3 class="nott font-weight-normal ls0" style="font-size: 36px;">Latest Books</h3>
+                                    <h3 class="nott font-weight-normal ls0" style="font-size: 36px;">Ultimos Eventos</h3>
                                 </div>
                             </div>
                         </div>
